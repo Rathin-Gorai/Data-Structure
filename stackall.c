@@ -4,7 +4,8 @@ void pop_element();
 void display_all();
 void main()
 {
-	int ver;
+	int ver,arr[100],top;
+	top=-1;
 	while(ver!=4)
 	{
 		printf("Chose one of that:");
@@ -26,7 +27,11 @@ void main()
 			printf("Good By\nHave a Great day");
 			exit(0);
 			break;
+			default:
+			printf("Invalid!!");
+			
 		}
 	}
 }
+
 
