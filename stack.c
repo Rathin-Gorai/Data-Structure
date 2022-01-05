@@ -1,13 +1,14 @@
 #include<stdio.h>
 #include<stdlib.h>
 //-----------------
+int top = -1,n=0,arr[100];
 void pop();
 void push();
 void display();
 //--------------------
 int main()
 {
-	int ver=0,z,top=-1,n,arr[100];
+	int ver=0,z;
 	printf("Enter the number of elements in the stack "); 
 	scanf("%d",&n);
 	while(ver!=4)
@@ -50,7 +51,7 @@ void pop()
 		printf("\nUnderflow");
 	else
 	{
-		top==top-1;
+		top=top-1;
 	}
 		
 }
