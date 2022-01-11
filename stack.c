@@ -5,7 +5,7 @@ int top = -1,n=0,arr[100];
 void pop();
 void push();
 void display();
-//--------------------
+//------------------
 int main()
 {
 	int ver=0,z;
