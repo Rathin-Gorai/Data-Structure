@@ -7,6 +7,9 @@ struct node
 	int data;
 	struct node *next;
 };
+struct node *head;
+
+
 //functions--------------
 void pop();
 void push();
@@ -14,10 +17,12 @@ void display();
 //----------------------
 int main()
 {
-	int ver=0;
+	int ver;
 	while(ver!=4)
 	{
-		printf("[1]->POP \n[2]->PUSH \n[3]->Display \n[4]->Exit");
+		printf("Chose You want to Do.\n[1]->POP \n[2]->PUSH \n[3]->Display \n[4]->Exit");
+		printf("\n->>>");
+		scanf("%d",&ver);
 		switch(ver)
 		{
 			case 1:
@@ -38,14 +43,57 @@ int main()
 	}
 }
 
-void pop(){
-	//55555
+void pop()
+{
+	struct node *ptr;
+	int item;
+	ptr = (struct node *)malloc(sizeof(struct node *));
+	if (ptr == NULL)
+	{
+		printf("\n OVERFLOW");
+	}
+	else 
+	{
+		printf("Enter value\n");
+		scanf("%d",&item);
+		ptr->data=item;
+		ptr->next=head;
+		head=ptr;
+		printf("\nNode Inserted");
+	}
 }
 
-void push(){
-	//5555
+void push()
+{
+	struct node *ptr;
+	if(head==NULL)
+	{
+		printf("\nList is Empty\n");
+	}
+	else
+	{
+		ptr=head;
+		head=ptr->next;
+		free(ptr);
+		printf("\nNode deleted from the begaining..\n");
+	}
 }
 
-void display(){
-	//555
+void display()
+{
+	struct node *ptr;
+	ptr=head;
+	if(ptr==NULL)
+	{
+		printf("\nNothing to Print");
+	}
+	else
+	{
+		printf("\nPrinting values..\n");
+		while(ptr!=NULL)
+		{
+			printf("\n%d",ptr->data);
+			ptr=ptr->next;
+		}
+	}
 }
