@@ -20,7 +20,7 @@ int main()
 	int ver;
 	while(ver!=4)
 	{
-		printf("Chose You want to Do.\n[1]->POP \n[2]->PUSH \n[3]->Display \n[4]->Exit");
+		printf("\n\nChose You want to Do.\n[1]->POP \n[2]->PUSH \n[3]->Display \n[4]->Exit");
 		printf("\n->>>");
 		scanf("%d",&ver);
 		switch(ver)
