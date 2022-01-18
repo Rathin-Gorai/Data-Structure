@@ -18,9 +18,12 @@ void display();
 int main()
 {
 	int ver;
+	system("color 2");
+	system("cls");
+	printf("\n\t\t  _|_|_|    _|                          _|    _|    \n\t\t_|        _|_|_|_|    _|_|_|    _|_|_|  _|  _|    \n\t\t  _|_|      _|      _|    _|  _|        _|_|      \n\t\t      _|    _|      _|    _|  _|        _|  _|    \n\t\t_|_|_|        _|_|    _|_|_|    _|_|_|  _|    _|  ");
 	while(ver!=4)
 	{
-		printf("\n\nChose You want to Do.\n[1]->POP \n[2]->PUSH \n[3]->Display \n[4]->Exit");
+		printf("\n\n\t\tChose You want to Do.\n\t\t[1]->PUSH \n\t\t[2]->POP \n\t\t[3]->Display \n\t\t[4]->Exit");
 		printf("\n->>>");
 		scanf("%d",&ver);
 		switch(ver)
@@ -45,7 +48,34 @@ int main()
 
 void pop()
 {
-	struct node *ptr;
+struct node *ptr,*ptr1;
+	if(head==NULL)
+	{
+		printf("\nlist is empty");
+	}
+	else if(head->next==NULL)
+	{
+		head =NULL;
+		free(head);
+		printf("\nOnly node of the list deleted..");
+	}
+	else
+	{
+		ptr=head;
+		while(ptr->next !=NULL)
+		{
+			ptr1=ptr;
+			ptr=ptr->next;
+		}
+		ptr1->next=NULL;
+		free(ptr);
+		printf("\nDeleted node from the last..");
+	}
+}
+
+void push()
+{
+		struct node *ptr;
 	int item;
 	ptr = (struct node *)malloc(sizeof(struct node *));
 	if (ptr == NULL)
@@ -60,22 +90,6 @@ void pop()
 		ptr->next=head;
 		head=ptr;
 		printf("\nNode Inserted");
-	}
-}
-
-void push()
-{
-	struct node *ptr;
-	if(head==NULL)
-	{
-		printf("\nList is Empty\n");
-	}
-	else
-	{
-		ptr=head;
-		head=ptr->next;
-		free(ptr);
-		printf("\nNode deleted from the begaining..\n");
 	}
 }
 
