@@ -21,6 +21,7 @@ int main()
 	system("color 2");
 	system("cls");
 	printf("\n\t\t  _|_|_|    _|                          _|    _|    \n\t\t_|        _|_|_|_|    _|_|_|    _|_|_|  _|  _|    \n\t\t  _|_|      _|      _|    _|  _|        _|_|      \n\t\t      _|    _|      _|    _|  _|        _|  _|    \n\t\t_|_|_|        _|_|    _|_|_|    _|_|_|  _|    _|  ");
+	printf("\n\t\t\t\t\t\t-@Rathin_Gorai");
 	while(ver!=4)
 	{
 		printf("\n\n\t\tChose You want to Do.\n\t\t[1]->PUSH \n\t\t[2]->POP \n\t\t[3]->Display \n\t\t[4]->Exit");
